@@ -269,9 +269,51 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             margin: 10px;
             padding: 15px;
-            text-align: center;
+            overflow: hidden;
+            position: relative;
             width: 200px;
         }
+
+        .product-info {
+            padding: 10px;
+        }
+
+        .product-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            line-height: 1.4;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff6600;
+            margin-top: 5px;
+        }
+
+        .discount {
+            font-size: 14px;
+            color: #27ae60;
+            margin-left: 5px;
+        }
+
+        .rating {
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .stars {
+            color: #f1c40f;
+            margin-right: 5px;
+        }
+
 
         .product-card:hover img {
             transform: scale(1.1);
@@ -283,20 +325,20 @@
             border-radius: 5px;
         }
 
-        .product-card h3 {
-            margin: 10px 0;
-        }
 
-        .product-card p {
-            color: #333;
-        }
 
         .add-to-cart {
             background-color: #1c61e7;
-            color: white;
-            border: none;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: #fff;
             padding: 10px;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
         }
 
@@ -338,7 +380,24 @@
             }
 
             .product-list {
-                flex-direction: column;
-                align-items: center;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px; /* Adjust spacing as needed */
+                justify-content: center;
             }
         }
+
+        @media (max-width: 460px) {
+            .product-card{
+                width: 160px;
+                margin: 1px;
+            }
+            
+        }
+
+        @media (max-width: 400px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr); /* Ensures exactly two columns */
+            }
+        }
+        
