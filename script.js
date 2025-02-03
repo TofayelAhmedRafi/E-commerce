@@ -34,11 +34,7 @@ function filterProducts(query) {
         productList.innerHTML = '<p>No products found.</p>';
     }
 }
-
-
-
-
-
+/* Cart Modal */
         let cart = [];
         let total = 0;
 
